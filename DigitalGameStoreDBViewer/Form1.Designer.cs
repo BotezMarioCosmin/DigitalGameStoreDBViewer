@@ -30,6 +30,17 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageUtenti = new System.Windows.Forms.TabPage();
+            this.radioButtonUtentiEmail = new System.Windows.Forms.RadioButton();
+            this.radioButtonUtentiGamertag = new System.Windows.Forms.RadioButton();
+            this.labelUtentiFiltra = new System.Windows.Forms.Label();
+            this.labelUtentiPassword = new System.Windows.Forms.Label();
+            this.textBoxUtentiPassword = new System.Windows.Forms.TextBox();
+            this.labelUtentiEmail = new System.Windows.Forms.Label();
+            this.textBoxUtentiEmail = new System.Windows.Forms.TextBox();
+            this.labelUtentiGamertag = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxUtentiSearch = new System.Windows.Forms.TextBox();
+            this.textBoxUtentiGamertag = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPageProdotti = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -39,7 +50,6 @@
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabPagePromozioni = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPageUtenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,7 +79,18 @@
             // 
             // tabPageUtenti
             // 
-            this.tabPageUtenti.Controls.Add(this.textBox1);
+            this.tabPageUtenti.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageUtenti.Controls.Add(this.radioButtonUtentiEmail);
+            this.tabPageUtenti.Controls.Add(this.radioButtonUtentiGamertag);
+            this.tabPageUtenti.Controls.Add(this.labelUtentiFiltra);
+            this.tabPageUtenti.Controls.Add(this.labelUtentiPassword);
+            this.tabPageUtenti.Controls.Add(this.textBoxUtentiPassword);
+            this.tabPageUtenti.Controls.Add(this.labelUtentiEmail);
+            this.tabPageUtenti.Controls.Add(this.textBoxUtentiEmail);
+            this.tabPageUtenti.Controls.Add(this.labelUtentiGamertag);
+            this.tabPageUtenti.Controls.Add(this.label1);
+            this.tabPageUtenti.Controls.Add(this.textBoxUtentiSearch);
+            this.tabPageUtenti.Controls.Add(this.textBoxUtentiGamertag);
             this.tabPageUtenti.Controls.Add(this.dataGridView1);
             this.tabPageUtenti.Location = new System.Drawing.Point(4, 29);
             this.tabPageUtenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -78,17 +99,116 @@
             this.tabPageUtenti.Size = new System.Drawing.Size(1156, 622);
             this.tabPageUtenti.TabIndex = 0;
             this.tabPageUtenti.Text = "Utenti";
-            this.tabPageUtenti.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonUtentiEmail
+            // 
+            this.radioButtonUtentiEmail.AutoSize = true;
+            this.radioButtonUtentiEmail.Location = new System.Drawing.Point(12, 149);
+            this.radioButtonUtentiEmail.Name = "radioButtonUtentiEmail";
+            this.radioButtonUtentiEmail.Size = new System.Drawing.Size(73, 24);
+            this.radioButtonUtentiEmail.TabIndex = 16;
+            this.radioButtonUtentiEmail.Text = "Email";
+            this.radioButtonUtentiEmail.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonUtentiGamertag
+            // 
+            this.radioButtonUtentiGamertag.AutoSize = true;
+            this.radioButtonUtentiGamertag.Checked = true;
+            this.radioButtonUtentiGamertag.Location = new System.Drawing.Point(12, 119);
+            this.radioButtonUtentiGamertag.Name = "radioButtonUtentiGamertag";
+            this.radioButtonUtentiGamertag.Size = new System.Drawing.Size(106, 24);
+            this.radioButtonUtentiGamertag.TabIndex = 15;
+            this.radioButtonUtentiGamertag.TabStop = true;
+            this.radioButtonUtentiGamertag.Text = "Gamertag";
+            this.radioButtonUtentiGamertag.UseVisualStyleBackColor = true;
+            // 
+            // labelUtentiFiltra
+            // 
+            this.labelUtentiFiltra.AutoSize = true;
+            this.labelUtentiFiltra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUtentiFiltra.Location = new System.Drawing.Point(7, 87);
+            this.labelUtentiFiltra.Name = "labelUtentiFiltra";
+            this.labelUtentiFiltra.Size = new System.Drawing.Size(115, 29);
+            this.labelUtentiFiltra.TabIndex = 14;
+            this.labelUtentiFiltra.Text = "Filtra per:";
+            // 
+            // labelUtentiPassword
+            // 
+            this.labelUtentiPassword.AutoSize = true;
+            this.labelUtentiPassword.Location = new System.Drawing.Point(7, 364);
+            this.labelUtentiPassword.Name = "labelUtentiPassword";
+            this.labelUtentiPassword.Size = new System.Drawing.Size(78, 20);
+            this.labelUtentiPassword.TabIndex = 11;
+            this.labelUtentiPassword.Text = "Password";
+            // 
+            // textBoxUtentiPassword
+            // 
+            this.textBoxUtentiPassword.Location = new System.Drawing.Point(11, 387);
+            this.textBoxUtentiPassword.Name = "textBoxUtentiPassword";
+            this.textBoxUtentiPassword.Size = new System.Drawing.Size(286, 26);
+            this.textBoxUtentiPassword.TabIndex = 10;
+            // 
+            // labelUtentiEmail
+            // 
+            this.labelUtentiEmail.AutoSize = true;
+            this.labelUtentiEmail.Location = new System.Drawing.Point(7, 286);
+            this.labelUtentiEmail.Name = "labelUtentiEmail";
+            this.labelUtentiEmail.Size = new System.Drawing.Size(48, 20);
+            this.labelUtentiEmail.TabIndex = 9;
+            this.labelUtentiEmail.Text = "Email";
+            // 
+            // textBoxUtentiEmail
+            // 
+            this.textBoxUtentiEmail.Location = new System.Drawing.Point(11, 309);
+            this.textBoxUtentiEmail.Name = "textBoxUtentiEmail";
+            this.textBoxUtentiEmail.Size = new System.Drawing.Size(286, 26);
+            this.textBoxUtentiEmail.TabIndex = 8;
+            // 
+            // labelUtentiGamertag
+            // 
+            this.labelUtentiGamertag.AutoSize = true;
+            this.labelUtentiGamertag.Location = new System.Drawing.Point(7, 207);
+            this.labelUtentiGamertag.Name = "labelUtentiGamertag";
+            this.labelUtentiGamertag.Size = new System.Drawing.Size(81, 20);
+            this.labelUtentiGamertag.TabIndex = 7;
+            this.labelUtentiGamertag.Text = "Gamertag";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 29);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Ricerca";
+            // 
+            // textBoxUtentiSearch
+            // 
+            this.textBoxUtentiSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUtentiSearch.Location = new System.Drawing.Point(7, 36);
+            this.textBoxUtentiSearch.Name = "textBoxUtentiSearch";
+            this.textBoxUtentiSearch.Size = new System.Drawing.Size(356, 35);
+            this.textBoxUtentiSearch.TabIndex = 5;
+            this.textBoxUtentiSearch.TextChanged += new System.EventHandler(this.textBoxSearch1_TextChanged);
+            // 
+            // textBoxUtentiGamertag
+            // 
+            this.textBoxUtentiGamertag.Location = new System.Drawing.Point(11, 230);
+            this.textBoxUtentiGamertag.Name = "textBoxUtentiGamertag";
+            this.textBoxUtentiGamertag.Size = new System.Drawing.Size(286, 26);
+            this.textBoxUtentiGamertag.TabIndex = 4;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(506, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(398, 10);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(638, 582);
+            this.dataGridView1.Size = new System.Drawing.Size(750, 582);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // tabPageProdotti
             // 
@@ -105,12 +225,12 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(506, 9);
+            this.dataGridView2.Location = new System.Drawing.Point(398, 10);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.Size = new System.Drawing.Size(638, 582);
-            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.Size = new System.Drawing.Size(750, 582);
+            this.dataGridView2.TabIndex = 3;
             // 
             // tabPageAcquisti
             // 
@@ -127,12 +247,12 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(506, 9);
+            this.dataGridView3.Location = new System.Drawing.Point(398, 10);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.Size = new System.Drawing.Size(638, 582);
-            this.dataGridView3.TabIndex = 2;
+            this.dataGridView3.Size = new System.Drawing.Size(750, 582);
+            this.dataGridView3.TabIndex = 3;
             // 
             // tabPageRecensioni
             // 
@@ -149,12 +269,12 @@
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(506, 9);
+            this.dataGridView4.Location = new System.Drawing.Point(398, 10);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 62;
-            this.dataGridView4.Size = new System.Drawing.Size(638, 582);
-            this.dataGridView4.TabIndex = 2;
+            this.dataGridView4.Size = new System.Drawing.Size(750, 582);
+            this.dataGridView4.TabIndex = 3;
             // 
             // tabPagePromozioni
             // 
@@ -171,24 +291,18 @@
             // dataGridView5
             // 
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(506, 9);
+            this.dataGridView5.Location = new System.Drawing.Point(398, 10);
             this.dataGridView5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersWidth = 62;
-            this.dataGridView5.Size = new System.Drawing.Size(638, 582);
-            this.dataGridView5.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(45, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 26);
-            this.textBox1.TabIndex = 4;
+            this.dataGridView5.Size = new System.Drawing.Size(750, 582);
+            this.dataGridView5.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.tabControl);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -216,15 +330,25 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageUtenti;
         private System.Windows.Forms.TabPage tabPageProdotti;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPageAcquisti;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TabPage tabPageRecensioni;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TabPage tabPagePromozioni;
+        private System.Windows.Forms.TextBox textBoxUtentiGamertag;
+        private System.Windows.Forms.TextBox textBoxUtentiSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUtentiGamertag;
+        private System.Windows.Forms.Label labelUtentiPassword;
+        private System.Windows.Forms.TextBox textBoxUtentiPassword;
+        private System.Windows.Forms.Label labelUtentiEmail;
+        private System.Windows.Forms.TextBox textBoxUtentiEmail;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelUtentiFiltra;
+        private System.Windows.Forms.RadioButton radioButtonUtentiEmail;
+        private System.Windows.Forms.RadioButton radioButtonUtentiGamertag;
     }
 }
 

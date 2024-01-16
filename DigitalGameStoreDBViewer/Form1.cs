@@ -117,7 +117,64 @@ namespace DigitalGameStoreDBViewer
             dataGridView4.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView5.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tabControl.SelectedIndex = 0;
+
             LoadDataIntoGridView();
+
+            textBoxUtentiSearch.Select();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            int selezionati = dataGridView1.SelectedRows.Count;
+            if (selezionati > 0)
+            {
+                textBoxUtentiGamertag.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                textBoxUtentiEmail.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                textBoxUtentiPassword.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            }
+        }
+
+        private void textBoxSearch1_TextChanged(object sender, EventArgs e)
+        {
+            //qundo cambia testo barra ricerca
+            string searchKeyword = textBoxUtentiSearch.Text.Trim();
+
+            //filtro campi
+            FilterData(searchKeyword, dataGridView1);
+        }
+
+        private void FilterData(string keyword, DataGridView dataGridView)
+        {
+ 
+            DataTable originalDataTable = (DataTable)dataGridView.Tag;
+
+            if (originalDataTable == null)
+            {
+                originalDataTable = (DataTable)dataGridView.DataSource;
+                dataGridView.Tag = originalDataTable;
+            }
+
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                //se barra di ricerca null allora gridview torna come prima
+                dataGridView.DataSource = originalDataTable;
+            }
+            else
+            {
+                if (radioButtonUtentiGamertag.Checked)
+                {
+                    DataView dv = new DataView(originalDataTable);
+                    dv.RowFilter = $"gamertag LIKE '{keyword}%'";
+                    dataGridView.DataSource = dv.ToTable();
+                }
+                else if (radioButtonUtentiEmail.Checked)
+                {
+                    DataView dv = new DataView(originalDataTable);
+                    dv.RowFilter = $"email LIKE '{keyword}%'";
+                    dataGridView.DataSource = dv.ToTable();
+                }
+
+            }
         }
     }
 }
