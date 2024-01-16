@@ -121,6 +121,7 @@ namespace DigitalGameStoreDBViewer
             LoadDataIntoGridView();
 
             textBoxUtentiSearch.Select();
+            textBoxProdottiSearch.Select();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -143,6 +144,7 @@ namespace DigitalGameStoreDBViewer
             FilterData(searchKeyword, dataGridView1);
         }
 
+
         private void FilterData(string keyword, DataGridView dataGridView)
         {
  
@@ -161,19 +163,63 @@ namespace DigitalGameStoreDBViewer
             }
             else
             {
-                if (radioButtonUtentiGamertag.Checked)
+                if (dataGridView.Name == "dataGridView1")
                 {
-                    DataView dv = new DataView(originalDataTable);
-                    dv.RowFilter = $"gamertag LIKE '{keyword}%'";
-                    dataGridView.DataSource = dv.ToTable();
+                    if (radioButtonUtentiGamertag.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"gamertag LIKE '{keyword}%'";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                    else if (radioButtonUtentiEmail.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"email LIKE '{keyword}%'";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+
                 }
-                else if (radioButtonUtentiEmail.Checked)
+                else if (dataGridView.Name == "dataGridView2")
                 {
-                    DataView dv = new DataView(originalDataTable);
-                    dv.RowFilter = $"email LIKE '{keyword}%'";
-                    dataGridView.DataSource = dv.ToTable();
+                    if (radioButtonProdottiNome.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"nome LIKE '{keyword}%'";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                    else if (radioButtonProdottiCategoria.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"categoria LIKE '{keyword}%'";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
                 }
 
+
+
+
+            }
+        }
+        private void textBoxProdottiSearch_TextChanged(object sender, EventArgs e)
+        {
+            //qundo cambia testo barra ricerca
+            string searchKeyword = textBoxProdottiSearch.Text.Trim();
+
+            //filtro campi
+            FilterData(searchKeyword, dataGridView2);
+        }
+
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
+        {
+            int selezionati = dataGridView2.SelectedRows.Count;
+            if (selezionati > 0)
+            {
+                textBoxProdottiId.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+                textBoxProdottiNome.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+                textBoxProdottiPrezzo.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
+                textBoxProdottiCategoria.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+                textBoxProdottiSviluppatore.Text = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
+                textBoxProdottiPubblicatore.Text = dataGridView2.SelectedRows[0].Cells[5].Value.ToString();
             }
         }
     }

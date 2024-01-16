@@ -38,7 +38,7 @@
             this.labelUtentiEmail = new System.Windows.Forms.Label();
             this.textBoxUtentiEmail = new System.Windows.Forms.TextBox();
             this.labelUtentiGamertag = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelUtentiRicerca = new System.Windows.Forms.Label();
             this.textBoxUtentiSearch = new System.Windows.Forms.TextBox();
             this.textBoxUtentiGamertag = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -50,6 +50,28 @@
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabPagePromozioni = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.radioButtonProdottiNome = new System.Windows.Forms.RadioButton();
+            this.labelProdottiFiltra = new System.Windows.Forms.Label();
+            this.labelProdottiRicerca = new System.Windows.Forms.Label();
+            this.textBoxProdottiSearch = new System.Windows.Forms.TextBox();
+            this.radioButtonProdottiCategoria = new System.Windows.Forms.RadioButton();
+            this.labelProdottiPrezzo = new System.Windows.Forms.Label();
+            this.textBoxProdottiPrezzo = new System.Windows.Forms.TextBox();
+            this.labelProdottiNome = new System.Windows.Forms.Label();
+            this.textBoxProdottiNome = new System.Windows.Forms.TextBox();
+            this.labelProdottiId = new System.Windows.Forms.Label();
+            this.textBoxProdottiId = new System.Windows.Forms.TextBox();
+            this.labelProdottiCategoria = new System.Windows.Forms.Label();
+            this.textBoxProdottiCategoria = new System.Windows.Forms.TextBox();
+            this.labelProdottiSviluppatore = new System.Windows.Forms.Label();
+            this.textBoxProdottiSviluppatore = new System.Windows.Forms.TextBox();
+            this.labelProdottiPubblicatore = new System.Windows.Forms.Label();
+            this.textBoxProdottiPubblicatore = new System.Windows.Forms.TextBox();
+            this.radioButtonAcquistiStato = new System.Windows.Forms.RadioButton();
+            this.radioButtonAcquistiGamertag = new System.Windows.Forms.RadioButton();
+            this.labelAcquistiFiltra = new System.Windows.Forms.Label();
+            this.labelAcquistiRicerca = new System.Windows.Forms.Label();
+            this.textBoxAcquistiSearch = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPageUtenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -88,7 +110,7 @@
             this.tabPageUtenti.Controls.Add(this.labelUtentiEmail);
             this.tabPageUtenti.Controls.Add(this.textBoxUtentiEmail);
             this.tabPageUtenti.Controls.Add(this.labelUtentiGamertag);
-            this.tabPageUtenti.Controls.Add(this.label1);
+            this.tabPageUtenti.Controls.Add(this.labelUtentiRicerca);
             this.tabPageUtenti.Controls.Add(this.textBoxUtentiSearch);
             this.tabPageUtenti.Controls.Add(this.textBoxUtentiGamertag);
             this.tabPageUtenti.Controls.Add(this.dataGridView1);
@@ -103,7 +125,7 @@
             // radioButtonUtentiEmail
             // 
             this.radioButtonUtentiEmail.AutoSize = true;
-            this.radioButtonUtentiEmail.Location = new System.Drawing.Point(12, 149);
+            this.radioButtonUtentiEmail.Location = new System.Drawing.Point(12, 155);
             this.radioButtonUtentiEmail.Name = "radioButtonUtentiEmail";
             this.radioButtonUtentiEmail.Size = new System.Drawing.Size(73, 24);
             this.radioButtonUtentiEmail.TabIndex = 16;
@@ -114,7 +136,7 @@
             // 
             this.radioButtonUtentiGamertag.AutoSize = true;
             this.radioButtonUtentiGamertag.Checked = true;
-            this.radioButtonUtentiGamertag.Location = new System.Drawing.Point(12, 119);
+            this.radioButtonUtentiGamertag.Location = new System.Drawing.Point(12, 125);
             this.radioButtonUtentiGamertag.Name = "radioButtonUtentiGamertag";
             this.radioButtonUtentiGamertag.Size = new System.Drawing.Size(106, 24);
             this.radioButtonUtentiGamertag.TabIndex = 15;
@@ -126,7 +148,7 @@
             // 
             this.labelUtentiFiltra.AutoSize = true;
             this.labelUtentiFiltra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUtentiFiltra.Location = new System.Drawing.Point(7, 87);
+            this.labelUtentiFiltra.Location = new System.Drawing.Point(7, 93);
             this.labelUtentiFiltra.Name = "labelUtentiFiltra";
             this.labelUtentiFiltra.Size = new System.Drawing.Size(115, 29);
             this.labelUtentiFiltra.TabIndex = 14;
@@ -173,20 +195,20 @@
             this.labelUtentiGamertag.TabIndex = 7;
             this.labelUtentiGamertag.Text = "Gamertag";
             // 
-            // label1
+            // labelUtentiRicerca
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 29);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Ricerca";
+            this.labelUtentiRicerca.AutoSize = true;
+            this.labelUtentiRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUtentiRicerca.Location = new System.Drawing.Point(7, 10);
+            this.labelUtentiRicerca.Name = "labelUtentiRicerca";
+            this.labelUtentiRicerca.Size = new System.Drawing.Size(95, 29);
+            this.labelUtentiRicerca.TabIndex = 6;
+            this.labelUtentiRicerca.Text = "Ricerca";
             // 
             // textBoxUtentiSearch
             // 
             this.textBoxUtentiSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUtentiSearch.Location = new System.Drawing.Point(7, 36);
+            this.textBoxUtentiSearch.Location = new System.Drawing.Point(7, 42);
             this.textBoxUtentiSearch.Name = "textBoxUtentiSearch";
             this.textBoxUtentiSearch.Size = new System.Drawing.Size(356, 35);
             this.textBoxUtentiSearch.TabIndex = 5;
@@ -212,6 +234,23 @@
             // 
             // tabPageProdotti
             // 
+            this.tabPageProdotti.Controls.Add(this.labelProdottiPubblicatore);
+            this.tabPageProdotti.Controls.Add(this.textBoxProdottiPubblicatore);
+            this.tabPageProdotti.Controls.Add(this.labelProdottiSviluppatore);
+            this.tabPageProdotti.Controls.Add(this.textBoxProdottiSviluppatore);
+            this.tabPageProdotti.Controls.Add(this.labelProdottiCategoria);
+            this.tabPageProdotti.Controls.Add(this.textBoxProdottiCategoria);
+            this.tabPageProdotti.Controls.Add(this.labelProdottiPrezzo);
+            this.tabPageProdotti.Controls.Add(this.textBoxProdottiPrezzo);
+            this.tabPageProdotti.Controls.Add(this.labelProdottiNome);
+            this.tabPageProdotti.Controls.Add(this.textBoxProdottiNome);
+            this.tabPageProdotti.Controls.Add(this.labelProdottiId);
+            this.tabPageProdotti.Controls.Add(this.textBoxProdottiId);
+            this.tabPageProdotti.Controls.Add(this.radioButtonProdottiCategoria);
+            this.tabPageProdotti.Controls.Add(this.radioButtonProdottiNome);
+            this.tabPageProdotti.Controls.Add(this.labelProdottiFiltra);
+            this.tabPageProdotti.Controls.Add(this.labelProdottiRicerca);
+            this.tabPageProdotti.Controls.Add(this.textBoxProdottiSearch);
             this.tabPageProdotti.Controls.Add(this.dataGridView2);
             this.tabPageProdotti.Location = new System.Drawing.Point(4, 29);
             this.tabPageProdotti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -231,9 +270,15 @@
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.Size = new System.Drawing.Size(750, 582);
             this.dataGridView2.TabIndex = 3;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
             // tabPageAcquisti
             // 
+            this.tabPageAcquisti.Controls.Add(this.radioButtonAcquistiStato);
+            this.tabPageAcquisti.Controls.Add(this.radioButtonAcquistiGamertag);
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiFiltra);
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiRicerca);
+            this.tabPageAcquisti.Controls.Add(this.textBoxAcquistiSearch);
             this.tabPageAcquisti.Controls.Add(this.dataGridView3);
             this.tabPageAcquisti.Location = new System.Drawing.Point(4, 29);
             this.tabPageAcquisti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -298,6 +343,203 @@
             this.dataGridView5.Size = new System.Drawing.Size(750, 582);
             this.dataGridView5.TabIndex = 3;
             // 
+            // radioButtonProdottiNome
+            // 
+            this.radioButtonProdottiNome.AutoSize = true;
+            this.radioButtonProdottiNome.Checked = true;
+            this.radioButtonProdottiNome.Location = new System.Drawing.Point(12, 125);
+            this.radioButtonProdottiNome.Name = "radioButtonProdottiNome";
+            this.radioButtonProdottiNome.Size = new System.Drawing.Size(76, 24);
+            this.radioButtonProdottiNome.TabIndex = 20;
+            this.radioButtonProdottiNome.TabStop = true;
+            this.radioButtonProdottiNome.Text = "Nome";
+            this.radioButtonProdottiNome.UseVisualStyleBackColor = true;
+            // 
+            // labelProdottiFiltra
+            // 
+            this.labelProdottiFiltra.AutoSize = true;
+            this.labelProdottiFiltra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProdottiFiltra.Location = new System.Drawing.Point(7, 93);
+            this.labelProdottiFiltra.Name = "labelProdottiFiltra";
+            this.labelProdottiFiltra.Size = new System.Drawing.Size(115, 29);
+            this.labelProdottiFiltra.TabIndex = 19;
+            this.labelProdottiFiltra.Text = "Filtra per:";
+            // 
+            // labelProdottiRicerca
+            // 
+            this.labelProdottiRicerca.AutoSize = true;
+            this.labelProdottiRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProdottiRicerca.Location = new System.Drawing.Point(7, 10);
+            this.labelProdottiRicerca.Name = "labelProdottiRicerca";
+            this.labelProdottiRicerca.Size = new System.Drawing.Size(95, 29);
+            this.labelProdottiRicerca.TabIndex = 18;
+            this.labelProdottiRicerca.Text = "Ricerca";
+            // 
+            // textBoxProdottiSearch
+            // 
+            this.textBoxProdottiSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProdottiSearch.Location = new System.Drawing.Point(7, 42);
+            this.textBoxProdottiSearch.Name = "textBoxProdottiSearch";
+            this.textBoxProdottiSearch.Size = new System.Drawing.Size(356, 35);
+            this.textBoxProdottiSearch.TabIndex = 17;
+            this.textBoxProdottiSearch.TextChanged += new System.EventHandler(this.textBoxProdottiSearch_TextChanged);
+            // 
+            // radioButtonProdottiCategoria
+            // 
+            this.radioButtonProdottiCategoria.AutoSize = true;
+            this.radioButtonProdottiCategoria.Location = new System.Drawing.Point(12, 155);
+            this.radioButtonProdottiCategoria.Name = "radioButtonProdottiCategoria";
+            this.radioButtonProdottiCategoria.Size = new System.Drawing.Size(103, 24);
+            this.radioButtonProdottiCategoria.TabIndex = 22;
+            this.radioButtonProdottiCategoria.Text = "Categoria";
+            this.radioButtonProdottiCategoria.UseVisualStyleBackColor = true;
+            // 
+            // labelProdottiPrezzo
+            // 
+            this.labelProdottiPrezzo.AutoSize = true;
+            this.labelProdottiPrezzo.Location = new System.Drawing.Point(8, 336);
+            this.labelProdottiPrezzo.Name = "labelProdottiPrezzo";
+            this.labelProdottiPrezzo.Size = new System.Drawing.Size(58, 20);
+            this.labelProdottiPrezzo.TabIndex = 28;
+            this.labelProdottiPrezzo.Text = "Prezzo";
+            // 
+            // textBoxProdottiPrezzo
+            // 
+            this.textBoxProdottiPrezzo.Location = new System.Drawing.Point(12, 359);
+            this.textBoxProdottiPrezzo.Name = "textBoxProdottiPrezzo";
+            this.textBoxProdottiPrezzo.Size = new System.Drawing.Size(286, 26);
+            this.textBoxProdottiPrezzo.TabIndex = 27;
+            // 
+            // labelProdottiNome
+            // 
+            this.labelProdottiNome.AutoSize = true;
+            this.labelProdottiNome.Location = new System.Drawing.Point(8, 269);
+            this.labelProdottiNome.Name = "labelProdottiNome";
+            this.labelProdottiNome.Size = new System.Drawing.Size(51, 20);
+            this.labelProdottiNome.TabIndex = 26;
+            this.labelProdottiNome.Text = "Nome";
+            // 
+            // textBoxProdottiNome
+            // 
+            this.textBoxProdottiNome.Location = new System.Drawing.Point(12, 292);
+            this.textBoxProdottiNome.Name = "textBoxProdottiNome";
+            this.textBoxProdottiNome.Size = new System.Drawing.Size(286, 26);
+            this.textBoxProdottiNome.TabIndex = 25;
+            // 
+            // labelProdottiId
+            // 
+            this.labelProdottiId.AutoSize = true;
+            this.labelProdottiId.Location = new System.Drawing.Point(8, 203);
+            this.labelProdottiId.Name = "labelProdottiId";
+            this.labelProdottiId.Size = new System.Drawing.Size(23, 20);
+            this.labelProdottiId.TabIndex = 24;
+            this.labelProdottiId.Text = "Id";
+            // 
+            // textBoxProdottiId
+            // 
+            this.textBoxProdottiId.Location = new System.Drawing.Point(12, 226);
+            this.textBoxProdottiId.Name = "textBoxProdottiId";
+            this.textBoxProdottiId.Size = new System.Drawing.Size(286, 26);
+            this.textBoxProdottiId.TabIndex = 23;
+            // 
+            // labelProdottiCategoria
+            // 
+            this.labelProdottiCategoria.AutoSize = true;
+            this.labelProdottiCategoria.Location = new System.Drawing.Point(8, 401);
+            this.labelProdottiCategoria.Name = "labelProdottiCategoria";
+            this.labelProdottiCategoria.Size = new System.Drawing.Size(78, 20);
+            this.labelProdottiCategoria.TabIndex = 30;
+            this.labelProdottiCategoria.Text = "Categoria";
+            // 
+            // textBoxProdottiCategoria
+            // 
+            this.textBoxProdottiCategoria.Location = new System.Drawing.Point(12, 424);
+            this.textBoxProdottiCategoria.Name = "textBoxProdottiCategoria";
+            this.textBoxProdottiCategoria.Size = new System.Drawing.Size(286, 26);
+            this.textBoxProdottiCategoria.TabIndex = 29;
+            // 
+            // labelProdottiSviluppatore
+            // 
+            this.labelProdottiSviluppatore.AutoSize = true;
+            this.labelProdottiSviluppatore.Location = new System.Drawing.Point(8, 465);
+            this.labelProdottiSviluppatore.Name = "labelProdottiSviluppatore";
+            this.labelProdottiSviluppatore.Size = new System.Drawing.Size(97, 20);
+            this.labelProdottiSviluppatore.TabIndex = 32;
+            this.labelProdottiSviluppatore.Text = "Sviluppatore";
+            // 
+            // textBoxProdottiSviluppatore
+            // 
+            this.textBoxProdottiSviluppatore.Location = new System.Drawing.Point(12, 488);
+            this.textBoxProdottiSviluppatore.Name = "textBoxProdottiSviluppatore";
+            this.textBoxProdottiSviluppatore.Size = new System.Drawing.Size(286, 26);
+            this.textBoxProdottiSviluppatore.TabIndex = 31;
+            // 
+            // labelProdottiPubblicatore
+            // 
+            this.labelProdottiPubblicatore.AutoSize = true;
+            this.labelProdottiPubblicatore.Location = new System.Drawing.Point(8, 529);
+            this.labelProdottiPubblicatore.Name = "labelProdottiPubblicatore";
+            this.labelProdottiPubblicatore.Size = new System.Drawing.Size(97, 20);
+            this.labelProdottiPubblicatore.TabIndex = 34;
+            this.labelProdottiPubblicatore.Text = "Pubblicatore";
+            // 
+            // textBoxProdottiPubblicatore
+            // 
+            this.textBoxProdottiPubblicatore.Location = new System.Drawing.Point(12, 552);
+            this.textBoxProdottiPubblicatore.Name = "textBoxProdottiPubblicatore";
+            this.textBoxProdottiPubblicatore.Size = new System.Drawing.Size(286, 26);
+            this.textBoxProdottiPubblicatore.TabIndex = 33;
+            // 
+            // radioButtonAcquistiStato
+            // 
+            this.radioButtonAcquistiStato.AutoSize = true;
+            this.radioButtonAcquistiStato.Location = new System.Drawing.Point(12, 155);
+            this.radioButtonAcquistiStato.Name = "radioButtonAcquistiStato";
+            this.radioButtonAcquistiStato.Size = new System.Drawing.Size(73, 24);
+            this.radioButtonAcquistiStato.TabIndex = 21;
+            this.radioButtonAcquistiStato.Text = "Email";
+            this.radioButtonAcquistiStato.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAcquistiGamertag
+            // 
+            this.radioButtonAcquistiGamertag.AutoSize = true;
+            this.radioButtonAcquistiGamertag.Checked = true;
+            this.radioButtonAcquistiGamertag.Location = new System.Drawing.Point(12, 125);
+            this.radioButtonAcquistiGamertag.Name = "radioButtonAcquistiGamertag";
+            this.radioButtonAcquistiGamertag.Size = new System.Drawing.Size(106, 24);
+            this.radioButtonAcquistiGamertag.TabIndex = 20;
+            this.radioButtonAcquistiGamertag.TabStop = true;
+            this.radioButtonAcquistiGamertag.Text = "Gamertag";
+            this.radioButtonAcquistiGamertag.UseVisualStyleBackColor = true;
+            // 
+            // labelAcquistiFiltra
+            // 
+            this.labelAcquistiFiltra.AutoSize = true;
+            this.labelAcquistiFiltra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAcquistiFiltra.Location = new System.Drawing.Point(7, 93);
+            this.labelAcquistiFiltra.Name = "labelAcquistiFiltra";
+            this.labelAcquistiFiltra.Size = new System.Drawing.Size(115, 29);
+            this.labelAcquistiFiltra.TabIndex = 19;
+            this.labelAcquistiFiltra.Text = "Filtra per:";
+            // 
+            // labelAcquistiRicerca
+            // 
+            this.labelAcquistiRicerca.AutoSize = true;
+            this.labelAcquistiRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAcquistiRicerca.Location = new System.Drawing.Point(7, 10);
+            this.labelAcquistiRicerca.Name = "labelAcquistiRicerca";
+            this.labelAcquistiRicerca.Size = new System.Drawing.Size(95, 29);
+            this.labelAcquistiRicerca.TabIndex = 18;
+            this.labelAcquistiRicerca.Text = "Ricerca";
+            // 
+            // textBoxAcquistiSearch
+            // 
+            this.textBoxAcquistiSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAcquistiSearch.Location = new System.Drawing.Point(7, 42);
+            this.textBoxAcquistiSearch.Name = "textBoxAcquistiSearch";
+            this.textBoxAcquistiSearch.Size = new System.Drawing.Size(356, 35);
+            this.textBoxAcquistiSearch.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -314,8 +556,10 @@
             this.tabPageUtenti.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageProdotti.ResumeLayout(false);
+            this.tabPageProdotti.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPageAcquisti.ResumeLayout(false);
+            this.tabPageAcquisti.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPageRecensioni.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -336,7 +580,7 @@
         private System.Windows.Forms.TabPage tabPagePromozioni;
         private System.Windows.Forms.TextBox textBoxUtentiGamertag;
         private System.Windows.Forms.TextBox textBoxUtentiSearch;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUtentiRicerca;
         private System.Windows.Forms.Label labelUtentiGamertag;
         private System.Windows.Forms.Label labelUtentiPassword;
         private System.Windows.Forms.TextBox textBoxUtentiPassword;
@@ -349,6 +593,28 @@
         private System.Windows.Forms.Label labelUtentiFiltra;
         private System.Windows.Forms.RadioButton radioButtonUtentiEmail;
         private System.Windows.Forms.RadioButton radioButtonUtentiGamertag;
+        private System.Windows.Forms.RadioButton radioButtonProdottiNome;
+        private System.Windows.Forms.Label labelProdottiFiltra;
+        private System.Windows.Forms.Label labelProdottiRicerca;
+        private System.Windows.Forms.TextBox textBoxProdottiSearch;
+        private System.Windows.Forms.RadioButton radioButtonProdottiCategoria;
+        private System.Windows.Forms.Label labelProdottiPubblicatore;
+        private System.Windows.Forms.TextBox textBoxProdottiPubblicatore;
+        private System.Windows.Forms.Label labelProdottiSviluppatore;
+        private System.Windows.Forms.TextBox textBoxProdottiSviluppatore;
+        private System.Windows.Forms.Label labelProdottiCategoria;
+        private System.Windows.Forms.TextBox textBoxProdottiCategoria;
+        private System.Windows.Forms.Label labelProdottiPrezzo;
+        private System.Windows.Forms.TextBox textBoxProdottiPrezzo;
+        private System.Windows.Forms.Label labelProdottiNome;
+        private System.Windows.Forms.TextBox textBoxProdottiNome;
+        private System.Windows.Forms.Label labelProdottiId;
+        private System.Windows.Forms.TextBox textBoxProdottiId;
+        private System.Windows.Forms.RadioButton radioButtonAcquistiStato;
+        private System.Windows.Forms.RadioButton radioButtonAcquistiGamertag;
+        private System.Windows.Forms.Label labelAcquistiFiltra;
+        private System.Windows.Forms.Label labelAcquistiRicerca;
+        private System.Windows.Forms.TextBox textBoxAcquistiSearch;
     }
 }
 
