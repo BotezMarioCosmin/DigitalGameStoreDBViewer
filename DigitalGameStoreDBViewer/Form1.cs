@@ -194,9 +194,21 @@ namespace DigitalGameStoreDBViewer
                         dataGridView.DataSource = dv.ToTable();
                     }
                 }
-
-
-
+                else if (dataGridView.Name == "dataGridView3")
+                {
+                    if (radioButtonAcquistiGamertag.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"gamertag LIKE '{keyword}%'";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                    else if (radioButtonAcquistiStato.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"statoordine LIKE '{keyword}%'";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                }
 
             }
         }
@@ -221,6 +233,29 @@ namespace DigitalGameStoreDBViewer
                 textBoxProdottiSviluppatore.Text = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
                 textBoxProdottiPubblicatore.Text = dataGridView2.SelectedRows[0].Cells[5].Value.ToString();
             }
+        }
+
+        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+        {
+            int selezionati = dataGridView3.SelectedRows.Count;
+            if (selezionati > 0)
+            {
+                textBoxAcquistiId.Text = dataGridView3.SelectedRows[0].Cells[0].Value.ToString();
+                textBoxAcquistiGamertag.Text = dataGridView3.SelectedRows[0].Cells[1].Value.ToString();
+                textBoxAcquistiProdottoId.Text = dataGridView3.SelectedRows[0].Cells[2].Value.ToString();
+                textBoxAcquistiImporto.Text = dataGridView3.SelectedRows[0].Cells[3].Value.ToString();
+                textBoxAcquistiDataOrdine.Text = dataGridView3.SelectedRows[0].Cells[4].Value.ToString();
+                textBoxAcquistiStato.Text = dataGridView3.SelectedRows[0].Cells[5].Value.ToString();
+            }
+        }
+
+        private void textBoxAcquistiSearch_TextChanged(object sender, EventArgs e)
+        {
+            //qundo cambia testo barra ricerca
+            string searchKeyword = textBoxAcquistiSearch.Text.Trim();
+
+            //filtro campi
+            FilterData(searchKeyword, dataGridView3);
         }
     }
 }

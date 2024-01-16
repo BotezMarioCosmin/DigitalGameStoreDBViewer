@@ -72,6 +72,18 @@
             this.labelAcquistiFiltra = new System.Windows.Forms.Label();
             this.labelAcquistiRicerca = new System.Windows.Forms.Label();
             this.textBoxAcquistiSearch = new System.Windows.Forms.TextBox();
+            this.labelAcquistiData = new System.Windows.Forms.Label();
+            this.textBoxAcquistiDataOrdine = new System.Windows.Forms.TextBox();
+            this.labelAcquistiImporto = new System.Windows.Forms.Label();
+            this.textBoxAcquistiImporto = new System.Windows.Forms.TextBox();
+            this.labelAcquistiProdottoId = new System.Windows.Forms.Label();
+            this.textBoxAcquistiProdottoId = new System.Windows.Forms.TextBox();
+            this.labelAcquistiGamertag = new System.Windows.Forms.Label();
+            this.textBoxAcquistiGamertag = new System.Windows.Forms.TextBox();
+            this.labelAcquistiId = new System.Windows.Forms.Label();
+            this.textBoxAcquistiId = new System.Windows.Forms.TextBox();
+            this.labelAcquistiStato = new System.Windows.Forms.Label();
+            this.textBoxAcquistiStato = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPageUtenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -274,6 +286,18 @@
             // 
             // tabPageAcquisti
             // 
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiStato);
+            this.tabPageAcquisti.Controls.Add(this.textBoxAcquistiStato);
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiData);
+            this.tabPageAcquisti.Controls.Add(this.textBoxAcquistiDataOrdine);
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiImporto);
+            this.tabPageAcquisti.Controls.Add(this.textBoxAcquistiImporto);
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiProdottoId);
+            this.tabPageAcquisti.Controls.Add(this.textBoxAcquistiProdottoId);
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiGamertag);
+            this.tabPageAcquisti.Controls.Add(this.textBoxAcquistiGamertag);
+            this.tabPageAcquisti.Controls.Add(this.labelAcquistiId);
+            this.tabPageAcquisti.Controls.Add(this.textBoxAcquistiId);
             this.tabPageAcquisti.Controls.Add(this.radioButtonAcquistiStato);
             this.tabPageAcquisti.Controls.Add(this.radioButtonAcquistiGamertag);
             this.tabPageAcquisti.Controls.Add(this.labelAcquistiFiltra);
@@ -298,6 +322,7 @@
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.Size = new System.Drawing.Size(750, 582);
             this.dataGridView3.TabIndex = 3;
+            this.dataGridView3.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
             // tabPageRecensioni
             // 
@@ -497,7 +522,7 @@
             this.radioButtonAcquistiStato.Name = "radioButtonAcquistiStato";
             this.radioButtonAcquistiStato.Size = new System.Drawing.Size(73, 24);
             this.radioButtonAcquistiStato.TabIndex = 21;
-            this.radioButtonAcquistiStato.Text = "Email";
+            this.radioButtonAcquistiStato.Text = "Stato";
             this.radioButtonAcquistiStato.UseVisualStyleBackColor = true;
             // 
             // radioButtonAcquistiGamertag
@@ -539,6 +564,103 @@
             this.textBoxAcquistiSearch.Name = "textBoxAcquistiSearch";
             this.textBoxAcquistiSearch.Size = new System.Drawing.Size(356, 35);
             this.textBoxAcquistiSearch.TabIndex = 17;
+            this.textBoxAcquistiSearch.TextChanged += new System.EventHandler(this.textBoxAcquistiSearch_TextChanged);
+            // 
+            // labelAcquistiData
+            // 
+            this.labelAcquistiData.AutoSize = true;
+            this.labelAcquistiData.Location = new System.Drawing.Point(8, 453);
+            this.labelAcquistiData.Name = "labelAcquistiData";
+            this.labelAcquistiData.Size = new System.Drawing.Size(92, 20);
+            this.labelAcquistiData.TabIndex = 42;
+            this.labelAcquistiData.Text = "Data ordine";
+            // 
+            // textBoxAcquistiDataOrdine
+            // 
+            this.textBoxAcquistiDataOrdine.Location = new System.Drawing.Point(12, 476);
+            this.textBoxAcquistiDataOrdine.Name = "textBoxAcquistiDataOrdine";
+            this.textBoxAcquistiDataOrdine.Size = new System.Drawing.Size(286, 26);
+            this.textBoxAcquistiDataOrdine.TabIndex = 41;
+            // 
+            // labelAcquistiImporto
+            // 
+            this.labelAcquistiImporto.AutoSize = true;
+            this.labelAcquistiImporto.Location = new System.Drawing.Point(8, 389);
+            this.labelAcquistiImporto.Name = "labelAcquistiImporto";
+            this.labelAcquistiImporto.Size = new System.Drawing.Size(64, 20);
+            this.labelAcquistiImporto.TabIndex = 40;
+            this.labelAcquistiImporto.Text = "Importo";
+            // 
+            // textBoxAcquistiImporto
+            // 
+            this.textBoxAcquistiImporto.Location = new System.Drawing.Point(12, 412);
+            this.textBoxAcquistiImporto.Name = "textBoxAcquistiImporto";
+            this.textBoxAcquistiImporto.Size = new System.Drawing.Size(286, 26);
+            this.textBoxAcquistiImporto.TabIndex = 39;
+            // 
+            // labelAcquistiProdottoId
+            // 
+            this.labelAcquistiProdottoId.AutoSize = true;
+            this.labelAcquistiProdottoId.Location = new System.Drawing.Point(8, 324);
+            this.labelAcquistiProdottoId.Name = "labelAcquistiProdottoId";
+            this.labelAcquistiProdottoId.Size = new System.Drawing.Size(88, 20);
+            this.labelAcquistiProdottoId.TabIndex = 38;
+            this.labelAcquistiProdottoId.Text = "Prodotto Id";
+            // 
+            // textBoxAcquistiProdottoId
+            // 
+            this.textBoxAcquistiProdottoId.Location = new System.Drawing.Point(12, 347);
+            this.textBoxAcquistiProdottoId.Name = "textBoxAcquistiProdottoId";
+            this.textBoxAcquistiProdottoId.Size = new System.Drawing.Size(286, 26);
+            this.textBoxAcquistiProdottoId.TabIndex = 37;
+            // 
+            // labelAcquistiGamertag
+            // 
+            this.labelAcquistiGamertag.AutoSize = true;
+            this.labelAcquistiGamertag.Location = new System.Drawing.Point(8, 257);
+            this.labelAcquistiGamertag.Name = "labelAcquistiGamertag";
+            this.labelAcquistiGamertag.Size = new System.Drawing.Size(81, 20);
+            this.labelAcquistiGamertag.TabIndex = 36;
+            this.labelAcquistiGamertag.Text = "Gamertag";
+            // 
+            // textBoxAcquistiGamertag
+            // 
+            this.textBoxAcquistiGamertag.Location = new System.Drawing.Point(12, 280);
+            this.textBoxAcquistiGamertag.Name = "textBoxAcquistiGamertag";
+            this.textBoxAcquistiGamertag.Size = new System.Drawing.Size(286, 26);
+            this.textBoxAcquistiGamertag.TabIndex = 35;
+            // 
+            // labelAcquistiId
+            // 
+            this.labelAcquistiId.AutoSize = true;
+            this.labelAcquistiId.Location = new System.Drawing.Point(8, 191);
+            this.labelAcquistiId.Name = "labelAcquistiId";
+            this.labelAcquistiId.Size = new System.Drawing.Size(89, 20);
+            this.labelAcquistiId.TabIndex = 34;
+            this.labelAcquistiId.Text = "Acquisto Id";
+            // 
+            // textBoxAcquistiId
+            // 
+            this.textBoxAcquistiId.Location = new System.Drawing.Point(12, 214);
+            this.textBoxAcquistiId.Name = "textBoxAcquistiId";
+            this.textBoxAcquistiId.Size = new System.Drawing.Size(286, 26);
+            this.textBoxAcquistiId.TabIndex = 33;
+            // 
+            // labelAcquistiStato
+            // 
+            this.labelAcquistiStato.AutoSize = true;
+            this.labelAcquistiStato.Location = new System.Drawing.Point(8, 515);
+            this.labelAcquistiStato.Name = "labelAcquistiStato";
+            this.labelAcquistiStato.Size = new System.Drawing.Size(48, 20);
+            this.labelAcquistiStato.TabIndex = 44;
+            this.labelAcquistiStato.Text = "Stato";
+            // 
+            // textBoxAcquistiStato
+            // 
+            this.textBoxAcquistiStato.Location = new System.Drawing.Point(12, 538);
+            this.textBoxAcquistiStato.Name = "textBoxAcquistiStato";
+            this.textBoxAcquistiStato.Size = new System.Drawing.Size(286, 26);
+            this.textBoxAcquistiStato.TabIndex = 43;
             // 
             // Form1
             // 
@@ -615,6 +737,18 @@
         private System.Windows.Forms.Label labelAcquistiFiltra;
         private System.Windows.Forms.Label labelAcquistiRicerca;
         private System.Windows.Forms.TextBox textBoxAcquistiSearch;
+        private System.Windows.Forms.Label labelAcquistiData;
+        private System.Windows.Forms.TextBox textBoxAcquistiDataOrdine;
+        private System.Windows.Forms.Label labelAcquistiImporto;
+        private System.Windows.Forms.TextBox textBoxAcquistiImporto;
+        private System.Windows.Forms.Label labelAcquistiProdottoId;
+        private System.Windows.Forms.TextBox textBoxAcquistiProdottoId;
+        private System.Windows.Forms.Label labelAcquistiGamertag;
+        private System.Windows.Forms.TextBox textBoxAcquistiGamertag;
+        private System.Windows.Forms.Label labelAcquistiId;
+        private System.Windows.Forms.TextBox textBoxAcquistiId;
+        private System.Windows.Forms.Label labelAcquistiStato;
+        private System.Windows.Forms.TextBox textBoxAcquistiStato;
     }
 }
 
