@@ -209,6 +209,21 @@ namespace DigitalGameStoreDBViewer
                         dataGridView.DataSource = dv.ToTable();
                     }
                 }
+                else if (dataGridView.Name == "dataGridView4")
+                {
+                    if (radioButtonRecensioniGamertag.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"gamertag LIKE '{keyword}%'";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                    else if (radioButtonRecensioniValutazione.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"valutazione = {Convert.ToInt32(keyword)}";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                }
 
             }
         }
@@ -256,6 +271,29 @@ namespace DigitalGameStoreDBViewer
 
             //filtro campi
             FilterData(searchKeyword, dataGridView3);
+        }
+
+        private void textBoxRecensioniSearch_TextChanged(object sender, EventArgs e)
+        {
+            //qundo cambia testo barra ricerca
+            string searchKeyword = textBoxRecensioniSearch.Text.Trim();
+
+            //filtro campi
+            FilterData(searchKeyword, dataGridView4);
+        }
+
+        private void dataGridView4_SelectionChanged(object sender, EventArgs e)
+        {
+            int selezionati = dataGridView4.SelectedRows.Count;
+            if (selezionati > 0)
+            {
+                textBoxRecensioniId.Text = dataGridView4.SelectedRows[0].Cells[0].Value.ToString();
+                textBoxRecensioniGamertag.Text = dataGridView4.SelectedRows[0].Cells[1].Value.ToString();
+                textBoxRecensioniProdottoId.Text = dataGridView4.SelectedRows[0].Cells[2].Value.ToString();
+                textBoxRecensioniValutazione.Text = dataGridView4.SelectedRows[0].Cells[3].Value.ToString();
+                textBoxRecensioniCommento.Text = dataGridView4.SelectedRows[0].Cells[4].Value.ToString();
+                textBoxRecensioniData.Text = dataGridView4.SelectedRows[0].Cells[5].Value.ToString();
+            }
         }
     }
 }
