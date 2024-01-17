@@ -224,7 +224,21 @@ namespace DigitalGameStoreDBViewer
                         dataGridView.DataSource = dv.ToTable();
                     }
                 }
-
+                else if (dataGridView.Name == "dataGridView5")
+                {
+                    if (radioButtonPromozioniSconto.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"sconto = {Convert.ToInt32(keyword)}";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                    else if (radioButtonPromozioniProdottoId.Checked)
+                    {
+                        DataView dv = new DataView(originalDataTable);
+                        dv.RowFilter = $"prodottoid = {Convert.ToInt32(keyword)}";
+                        dataGridView.DataSource = dv.ToTable();
+                    }
+                }
             }
         }
         private void textBoxProdottiSearch_TextChanged(object sender, EventArgs e)
@@ -294,6 +308,29 @@ namespace DigitalGameStoreDBViewer
                 textBoxRecensioniCommento.Text = dataGridView4.SelectedRows[0].Cells[4].Value.ToString();
                 textBoxRecensioniData.Text = dataGridView4.SelectedRows[0].Cells[5].Value.ToString();
             }
+        }
+
+        private void dataGridView5_SelectionChanged(object sender, EventArgs e)
+        {
+            int selezionati = dataGridView5.SelectedRows.Count;
+            if (selezionati > 0)
+            {
+                textBoxPromozioniId.Text = dataGridView5.SelectedRows[0].Cells[0].Value.ToString();
+                textBoxPromozioniProdottoId.Text = dataGridView5.SelectedRows[0].Cells[1].Value.ToString();
+                textBoxPromozioniSconto.Text = dataGridView5.SelectedRows[0].Cells[2].Value.ToString();
+                textBoxPromozioniDataInizio.Text = dataGridView5.SelectedRows[0].Cells[3].Value.ToString();
+                textBoxPromozioniDataFine.Text = dataGridView5.SelectedRows[0].Cells[4].Value.ToString();
+               
+            }
+        }
+
+        private void textBoxPromozioniSearch_TextChanged(object sender, EventArgs e)
+        {
+            //qundo cambia testo barra ricerca
+            string searchKeyword = textBoxPromozioniSearch.Text.Trim();
+
+            //filtro campi
+            FilterData(searchKeyword, dataGridView5);
         }
     }
 }

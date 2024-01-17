@@ -101,6 +101,21 @@
             this.labelRecensioniFiltra = new System.Windows.Forms.Label();
             this.labelRecensioniRicerca = new System.Windows.Forms.Label();
             this.textBoxRecensioniSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxPromozioniDataFine = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxPromozioniDataInizio = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxPromozioniSconto = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxPromozioniProdottoId = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxPromozioniId = new System.Windows.Forms.TextBox();
+            this.radioButtonPromozioniProdottoId = new System.Windows.Forms.RadioButton();
+            this.radioButtonPromozioniSconto = new System.Windows.Forms.RadioButton();
+            this.labelPromozioniFiltra = new System.Windows.Forms.Label();
+            this.labelPromozioniRicerca = new System.Windows.Forms.Label();
+            this.textBoxPromozioniSearch = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPageUtenti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -677,6 +692,21 @@
             // 
             // tabPagePromozioni
             // 
+            this.tabPagePromozioni.Controls.Add(this.label1);
+            this.tabPagePromozioni.Controls.Add(this.textBoxPromozioniDataFine);
+            this.tabPagePromozioni.Controls.Add(this.label2);
+            this.tabPagePromozioni.Controls.Add(this.textBoxPromozioniDataInizio);
+            this.tabPagePromozioni.Controls.Add(this.label3);
+            this.tabPagePromozioni.Controls.Add(this.textBoxPromozioniSconto);
+            this.tabPagePromozioni.Controls.Add(this.label4);
+            this.tabPagePromozioni.Controls.Add(this.textBoxPromozioniProdottoId);
+            this.tabPagePromozioni.Controls.Add(this.label5);
+            this.tabPagePromozioni.Controls.Add(this.textBoxPromozioniId);
+            this.tabPagePromozioni.Controls.Add(this.radioButtonPromozioniProdottoId);
+            this.tabPagePromozioni.Controls.Add(this.radioButtonPromozioniSconto);
+            this.tabPagePromozioni.Controls.Add(this.labelPromozioniFiltra);
+            this.tabPagePromozioni.Controls.Add(this.labelPromozioniRicerca);
+            this.tabPagePromozioni.Controls.Add(this.textBoxPromozioniSearch);
             this.tabPagePromozioni.Controls.Add(this.dataGridView5);
             this.tabPagePromozioni.Location = new System.Drawing.Point(4, 29);
             this.tabPagePromozioni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -696,6 +726,7 @@
             this.dataGridView5.RowHeadersWidth = 62;
             this.dataGridView5.Size = new System.Drawing.Size(750, 582);
             this.dataGridView5.TabIndex = 3;
+            this.dataGridView5.SelectionChanged += new System.EventHandler(this.dataGridView5_SelectionChanged);
             // 
             // labelRecensioniData
             // 
@@ -844,6 +875,137 @@
             this.textBoxRecensioniSearch.TabIndex = 45;
             this.textBoxRecensioniSearch.TextChanged += new System.EventHandler(this.textBoxRecensioniSearch_TextChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 453);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Data Fine";
+            // 
+            // textBoxPromozioniDataFine
+            // 
+            this.textBoxPromozioniDataFine.Location = new System.Drawing.Point(12, 476);
+            this.textBoxPromozioniDataFine.Name = "textBoxPromozioniDataFine";
+            this.textBoxPromozioniDataFine.Size = new System.Drawing.Size(286, 26);
+            this.textBoxPromozioniDataFine.TabIndex = 73;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 389);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 20);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "Data Inizio";
+            // 
+            // textBoxPromozioniDataInizio
+            // 
+            this.textBoxPromozioniDataInizio.Location = new System.Drawing.Point(12, 412);
+            this.textBoxPromozioniDataInizio.Name = "textBoxPromozioniDataInizio";
+            this.textBoxPromozioniDataInizio.Size = new System.Drawing.Size(286, 26);
+            this.textBoxPromozioniDataInizio.TabIndex = 71;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 324);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 20);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Sconto";
+            // 
+            // textBoxPromozioniSconto
+            // 
+            this.textBoxPromozioniSconto.Location = new System.Drawing.Point(12, 347);
+            this.textBoxPromozioniSconto.Name = "textBoxPromozioniSconto";
+            this.textBoxPromozioniSconto.Size = new System.Drawing.Size(286, 26);
+            this.textBoxPromozioniSconto.TabIndex = 69;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.TabIndex = 68;
+            this.label4.Text = "Prodotto Id";
+            // 
+            // textBoxPromozioniProdottoId
+            // 
+            this.textBoxPromozioniProdottoId.Location = new System.Drawing.Point(12, 280);
+            this.textBoxPromozioniProdottoId.Name = "textBoxPromozioniProdottoId";
+            this.textBoxPromozioniProdottoId.Size = new System.Drawing.Size(286, 26);
+            this.textBoxPromozioniProdottoId.TabIndex = 67;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 191);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 20);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Promozione Id";
+            // 
+            // textBoxPromozioniId
+            // 
+            this.textBoxPromozioniId.Location = new System.Drawing.Point(12, 214);
+            this.textBoxPromozioniId.Name = "textBoxPromozioniId";
+            this.textBoxPromozioniId.Size = new System.Drawing.Size(286, 26);
+            this.textBoxPromozioniId.TabIndex = 65;
+            // 
+            // radioButtonPromozioniProdottoId
+            // 
+            this.radioButtonPromozioniProdottoId.AutoSize = true;
+            this.radioButtonPromozioniProdottoId.Location = new System.Drawing.Point(12, 155);
+            this.radioButtonPromozioniProdottoId.Name = "radioButtonPromozioniProdottoId";
+            this.radioButtonPromozioniProdottoId.Size = new System.Drawing.Size(113, 24);
+            this.radioButtonPromozioniProdottoId.TabIndex = 64;
+            this.radioButtonPromozioniProdottoId.Text = "Id Prodotto";
+            this.radioButtonPromozioniProdottoId.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPromozioniSconto
+            // 
+            this.radioButtonPromozioniSconto.AutoSize = true;
+            this.radioButtonPromozioniSconto.Checked = true;
+            this.radioButtonPromozioniSconto.Location = new System.Drawing.Point(12, 125);
+            this.radioButtonPromozioniSconto.Name = "radioButtonPromozioniSconto";
+            this.radioButtonPromozioniSconto.Size = new System.Drawing.Size(85, 24);
+            this.radioButtonPromozioniSconto.TabIndex = 63;
+            this.radioButtonPromozioniSconto.TabStop = true;
+            this.radioButtonPromozioniSconto.Text = "Sconto";
+            this.radioButtonPromozioniSconto.UseVisualStyleBackColor = true;
+            // 
+            // labelPromozioniFiltra
+            // 
+            this.labelPromozioniFiltra.AutoSize = true;
+            this.labelPromozioniFiltra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPromozioniFiltra.Location = new System.Drawing.Point(7, 93);
+            this.labelPromozioniFiltra.Name = "labelPromozioniFiltra";
+            this.labelPromozioniFiltra.Size = new System.Drawing.Size(115, 29);
+            this.labelPromozioniFiltra.TabIndex = 62;
+            this.labelPromozioniFiltra.Text = "Filtra per:";
+            // 
+            // labelPromozioniRicerca
+            // 
+            this.labelPromozioniRicerca.AutoSize = true;
+            this.labelPromozioniRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPromozioniRicerca.Location = new System.Drawing.Point(7, 10);
+            this.labelPromozioniRicerca.Name = "labelPromozioniRicerca";
+            this.labelPromozioniRicerca.Size = new System.Drawing.Size(95, 29);
+            this.labelPromozioniRicerca.TabIndex = 61;
+            this.labelPromozioniRicerca.Text = "Ricerca";
+            // 
+            // textBoxPromozioniSearch
+            // 
+            this.textBoxPromozioniSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPromozioniSearch.Location = new System.Drawing.Point(7, 42);
+            this.textBoxPromozioniSearch.Name = "textBoxPromozioniSearch";
+            this.textBoxPromozioniSearch.Size = new System.Drawing.Size(356, 35);
+            this.textBoxPromozioniSearch.TabIndex = 60;
+            this.textBoxPromozioniSearch.TextChanged += new System.EventHandler(this.textBoxPromozioniSearch_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -869,6 +1031,7 @@
             this.tabPageRecensioni.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPagePromozioni.ResumeLayout(false);
+            this.tabPagePromozioni.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.ResumeLayout(false);
 
@@ -949,6 +1112,21 @@
         private System.Windows.Forms.Label labelRecensioniFiltra;
         private System.Windows.Forms.Label labelRecensioniRicerca;
         private System.Windows.Forms.TextBox textBoxRecensioniSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxPromozioniDataFine;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxPromozioniDataInizio;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxPromozioniSconto;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxPromozioniProdottoId;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxPromozioniId;
+        private System.Windows.Forms.RadioButton radioButtonPromozioniProdottoId;
+        private System.Windows.Forms.RadioButton radioButtonPromozioniSconto;
+        private System.Windows.Forms.Label labelPromozioniFiltra;
+        private System.Windows.Forms.Label labelPromozioniRicerca;
+        private System.Windows.Forms.TextBox textBoxPromozioniSearch;
     }
 }
 
